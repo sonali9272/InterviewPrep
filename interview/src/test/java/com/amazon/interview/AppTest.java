@@ -1,5 +1,6 @@
 package com.amazon.interview;
 
+import junit.framework.Assert;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -33,6 +34,9 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+    	App.main(null);
+    	App app = new App();
+    	int response = app.sum(1, 2);
+    	Assert.assertEquals(3, response);
     }
 }
